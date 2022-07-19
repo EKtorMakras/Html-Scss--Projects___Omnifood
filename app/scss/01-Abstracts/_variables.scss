@@ -1,0 +1,279 @@
+//& **********************************  Colors  ********************************** //
+@use "sass:list";
+@use "sass:map";
+// @use "sass:meta";
+@use "functions"as *;
+
+
+
+$colors: ( //
+
+
+    //% ***************  General  *************** //
+
+    "black-1": #000,
+    "white-1": #fff,
+    "white-2": #fdf2e9,
+
+    "red-dark": #842029,
+    "red-light": #f8d7da,
+
+    "green-dark": #0f5132,
+    "green-light": #d1e7dd,
+
+    //% ***************    *************** //
+
+
+
+    //% ***************  Shades of Grey  *************** //
+
+    greys: ( //
+
+        /* General ones */
+        "generic-1": #777,
+        "generic-2": #999,
+        "generic-3": #555,
+        "generic-4": #444,
+        "generic-5": #333,
+
+        /* darkest grey - used for headings */
+        "dark-1": #0f172a,
+        "dark-2": #1e293b,
+        "dark-3": #102a42,
+        "dark-4": #243a52,
+        "dark-5": #334155,
+        "dark-6": #324d67,
+        "dark-7": #475569,
+
+        /* lighter grey - used for paragraphs */
+        "light-1": #64748b,
+        "light-2": #617d98,
+        "light-3": #829ab0,
+        "light-4": #94aeb8,
+        "light-5": #bcccdc,
+        "light-6": #dae2ec,
+        "light-7": #e2e8f0,
+        "light-8": #eaf1f8,
+        "light-9": #f1f5f8,
+    ),
+
+    //% ***************    *************** //
+
+
+
+    //% ***************  Primary  *************** //
+
+    primary: ( //
+
+        "base": hsl(28, 80%, 52%),
+
+        // Light Shades
+        "light-1": #e3ba96,
+        "light-2": hsl(28, 58%, 65%),
+        "light-3": hsl(28, 58%, 56%),
+        "light-4": hsl(28, 58%, 48%),
+        "light-5": hsl(28, 58%, 43%),
+
+        // Dark Shades
+        "dark-1": hsl(28, 74%, 47%),
+        "dark-2": hsl(28, 70%, 43%),
+        "dark-3": hsl(28, 60%, 35%),
+        "dark-4": hsl(28, 58%, 20%),
+        "dark-5": hsl(28, 58%, 14%),
+    ),
+
+    //% ***************    *************** //
+
+
+
+    //% ***************  Secondary  *************** //
+
+    secondary: ( //
+
+        "base": hsl(170, 58%, 39%),
+
+        // Light Shades
+        "light-1": hsl(170, 58%, 74%),
+        "light-2": hsl(170, 58%, 65%),
+        "light-3": hsl(170, 58%, 56%),
+        "light-4": hsl(170, 58%, 48%),
+        "light-5": hsl(170, 58%, 43%),
+
+        // Dark Shades
+        "dark-1": hsl(170, 58%, 36%),
+        "dark-2": hsl(170, 58%, 34%),
+        "dark-3": hsl(170, 58%, 28%),
+        "dark-4": hsl(170, 58%, 20%),
+        "dark-5": hsl(170, 58%, 14%),
+    ),
+
+    //% ***************    *************** //
+
+);
+
+
+@function color($key, $map: $colors) {
+
+    $keys: str-explode($key, '.');
+
+    @return deep-map-get($map, $keys...);
+}
+
+
+
+//^ *****  Color Schemes  ***** //
+
+// Gradients
+$gradient-1: //
+color('primary.base'),
+color('secondary.base');
+
+
+// Schemes
+$scheme-default : //
+color('primary.base'),
+color('greys.light-9');
+
+$scheme-secondary : //
+color('secondary'),
+color('greys.light-9');
+
+$scheme-gradient-1 : //
+$gradient-1,
+color('greys.light-9');
+
+//^ *****    ***** //
+
+
+//& **********************************  End Of Colors  ********************************** //
+
+
+
+
+//& **********************************  Fonts  ********************************** //
+
+
+//% ***************  Font-Size  *************** //
+
+$font-sizes: ( //
+
+    // Text
+    "sm-1": clamp(1.3rem, 1.1rem + 0.2vw, 1.5rem),
+    "sm-2": clamp(1.5rem, 1.2rem + 0.3vw, 1.7rem),
+    "sm-3": clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem),
+    "rg": clamp(1.9rem, 1.5rem + 0.5vw, 2rem),
+    "lg-1": clamp(2rem, 1.7rem + 0.6vw, 2.3rem),
+    "lg-2": clamp(2.2rem, 1.8rem + 0.7vw, 2.4rem),
+    "lg-3": clamp(2.4rem, 1.9rem + 0.9vw, 2.7rem),
+    "lg-4": clamp(2.6rem, 2rem + 1vw, 2.9rem),
+
+    // Headings
+    "head-1": 4.8rem,
+    "head-2": 4.2rem,
+    "head-3": 3rem,
+    "head-4": 2.8rem);
+
+
+@function fs($font-size-style) {
+    @return map-get($font-sizes, $font-size-style);
+}
+
+//% ***************    *************** //
+
+
+
+//% ***************  Font-Weight  *************** //
+
+$font-weights: ( //
+    "thin": 100,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "bold": 700,
+    "black": 900);
+
+
+@function fw($font-weight-style) {
+    @return map-get($font-weights, $font-weight-style);
+}
+
+//% ***************    *************** //
+
+
+
+//% ***************  Font-Family  *************** //
+
+$ff-primary: 'Rubik',
+sans-serif;
+
+$ff-secondary: Arial,
+Helvetica,
+sans-serif;
+
+//% ***************    *************** //
+
+
+//& **********************************  End Of Fonts  ********************************** //
+
+
+
+
+//& **********************************  Shadows  ********************************** //
+
+$shadows: ( //
+
+    // Small
+    sm-1: 0 0.125rem 0.25rem rgba(color('black-1'), 0.075),
+    sm-2: 0 0.15rem 0.28rem rgba(color('black-1'), 0.1),
+    sm-3: 0 0.2rem 0.3rem rgba(color('black-1'), 0.12),
+
+    // Regular 
+    rg-1: 0 0.4rem 0.8rem rgba(color('black-1'), 0.15),
+    rg-2: 0 0.5rem 1rem rgba(color('black-1'), 0.15),
+    rg-3: 0 0.7rem 1.2rem rgba(color('black-1'), 0.17),
+
+    // Large
+    lg-1: 0 1rem 2.5rem rgba(color('black-1'), 0.175),
+    lg-2: 0 1rem 3rem rgba(color('black-1'), 0.19),
+    lg-3: 0 1.3rem 3rem rgba(color('black-1'), 0.2));
+
+
+@function shadow($shadow) {
+    @return map-get($shadows, $shadow);
+}
+
+$primary:color('primary.base');
+
+//& **********************************  End Of Shadows  ********************************** //
+
+
+
+
+//& **********************************  Other  ********************************** //
+
+$spacing: 1.2px;
+$radius: 3px;
+$transition: all 0.3s ease;
+$max-width: 130rem;
+
+
+$gaps : ( // 
+
+    'sm-1':1.5rem,
+    'sm-2':2rem,
+    'sm-3':2.5rem,
+    'rg':3rem,
+    'lg-1':3.5rem,
+    'lg-2':4rem,
+    'lg-3':5rem,
+    'lg-4':6.5rem,
+    'lg-5':8rem,
+    'lg-6':12rem,
+);
+
+@function gap($gap) {
+    @return map-get($gaps, $gap);
+}
+
+//& **********************************  End Of Other  ********************************** //

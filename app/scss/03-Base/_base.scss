@@ -1,0 +1,27 @@
+@use '../01-Abstracts'as *;
+
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+a {
+    text-decoration: none;
+    transition: $transition;
+    display: inline-block;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}

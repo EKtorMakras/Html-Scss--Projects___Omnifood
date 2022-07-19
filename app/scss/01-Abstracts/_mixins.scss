@@ -1,0 +1,220 @@
+@use 'sass:list';
+@use 'variables'as *;
+
+
+
+//% ***************  General  *************** //
+
+// Transition
+@mixin transition($property:all, $time:.3s, $function:ease-in-out) {
+    transition: $property $time $function;
+}
+
+
+// Flexbox
+@mixin flex($direction:row, $justifycontent:center, $alignitems:center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignitems;
+}
+
+
+// Pseudo element
+@mixin pseudo ($loc: before, $content: '') {
+    position: relative;
+
+    &::#{$loc} {
+        content: $content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+    }
+
+}
+
+
+// Bg-Image
+@mixin bg-image($image) {
+    background-image: url(../img/#{$image});
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+// Darken bg color
+@mixin darkenBgColor ($color1) {
+    background-color: $color1;
+
+    &:hover,
+    &:active {
+        background-color: darken($color1, 6%);
+    }
+}
+
+
+// Color Schemes
+@mixin color-scheme ($bg, $text) {
+
+    // If we have a single bg color set bg color
+    @if list.length($bg)==1 {
+        background-color: $bg;
+        color: $text;
+    }
+
+    // If we have a multiple bg colors set bg gradient
+    @else {
+        background-image: linear-gradient(to right bottom, $bg);
+        color: $text;
+    }
+}
+
+
+// Clearfix
+@mixin clearfix {
+
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//% ***************    *************** //
+
+
+
+//% ***************  Centering  *************** //
+
+// Center with position //
+@mixin center-pos {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// Center with flexbox //
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+// Center with margins //
+@mixin center-mar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//% ***************    *************** //
+
+
+
+//% ***************  Media Queries  *************** //
+
+
+//@ ************  All Widths  ************ //
+
+@mixin media-min ($width) {
+    @media screen and (min-width:$width) {
+        @content;
+    }
+}
+
+@mixin media-max ($width) {
+    @media screen and (max-width:$width) {
+        @content;
+    }
+}
+
+@mixin media-min-max($min-width, $max-width) {
+    @media screen and (min-width:$min-width) and (max-width:$max-width) {
+        @content;
+    }
+}
+
+//@ ************    ************ //
+
+
+
+//@ ************  Custom Widths  ************ //
+
+$break-points: ( // 
+    "phone-small": 40em,
+    "phone-big": 60em,
+    "tablet-port": 80em,
+    "tablet-land": 100em,
+    "desktop": 130em,
+    "desktop-big": 180em);
+
+
+@function break-points($break-point-limit) {
+    @return map-get($break-points, $break-point-limit);
+}
+
+
+
+@mixin respond($breakpoint) {
+
+    // 400px
+    @if $breakpoint==phone-small {
+        @media screen and (max-width:break-points(phone-small)) {
+            @content;
+        }
+    }
+
+
+    // 600px
+    @if $breakpoint==phone-big {
+        @media screen and (max-width:break-points(phone-big)) {
+            @content;
+        }
+    }
+
+
+    // 800px
+    @if $breakpoint==tab-port {
+        @media screen and (max-width:break-points(tab-port)) {
+            @content;
+        }
+    }
+
+
+    // 1000px
+    @if $breakpoint==tab-land {
+        @media screen and (min-width:break-points(tab-land)) {
+            @content;
+        }
+    }
+
+
+    // 1300px
+    @if $breakpoint==desktop {
+        @media screen and (min-width:break-points(desktop)) {
+            @content;
+        }
+    }
+
+
+    // 1800px
+    @if $breakpoint==desktop-big {
+        @media screen and (min-width:break-points(desktop-big)) {
+            @content;
+        }
+    }
+}
+
+//@ ************    ************ //
+
+
+//% ***************    *************** //

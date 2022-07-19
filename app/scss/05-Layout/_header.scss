@@ -1,0 +1,24 @@
+@use '../01-Abstracts'as *;
+
+
+.header {
+
+    padding: 2rem 0;
+    background-color: color('white-2');
+
+    // fixed height for sticky nav
+    height: 9rem;
+
+
+
+    &__center {
+        width: 85%;
+        @include center-mar;
+        @include flex(row, space-between, center);
+    }
+
+
+    &__logo {
+        height: 3rem;
+    }
+}

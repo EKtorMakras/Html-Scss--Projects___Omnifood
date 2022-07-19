@@ -1,0 +1,33 @@
+{
+  "name": "set-up-small",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EKtorMakras/Set-up-small.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EKtorMakras/Set-up-small/issues"
+  },
+  "homepage": "https://github.com/EKtorMakras/Set-up-small#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-purgecss": "^4.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.14",
+    "sass": "^1.53.0"
+  },
+  "dependencies": {}
+}

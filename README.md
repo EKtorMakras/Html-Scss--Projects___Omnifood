@@ -1,0 +1,1 @@
+My default architecture for website projects including all the modern scss syntax and a lot of helpful mixins and variables.

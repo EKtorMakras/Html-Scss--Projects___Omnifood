@@ -1,0 +1,57 @@
+@use '../01-Abstracts'as *;
+
+// container
+.container {
+    max-width: $max-width;
+    @include center-mar;
+    padding: 5rem 5.5rem 8rem;
+
+}
+
+
+// clearfix
+.clearfix {
+    @include clearfix;
+}
+
+
+// center text
+.u-center-text {
+    text-align: center;
+}
+
+
+// section set-up
+.section {
+    padding: 5rem 0;
+
+
+    &-center {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+
+        @include media-min(992px) {
+            width: 95vw;
+        }
+    }
+
+
+    &-title {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+}
+
+
+// Grid
+
+@for $i from 2 through 4 {
+
+    .grid--#{$i}-cols {
+        display: grid;
+        grid-template-columns: repeat(#{$i}, 1fr);
+        column-gap: gap(lg-3);
+        row-gap: gap(lg-6);
+    }
+}

@@ -1,0 +1,68 @@
+@use '../01-Abstracts'as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: $ff-primary;
+    font-size: fs(rg);
+    font-weight: fw(regular);
+    line-height: 1.5;
+    color: color('greys.generic-3');
+}
+
+
+p {
+    font-size: fs(rg);
+    line-height: 1.7;
+    color: inherit;
+    margin-bottom: 1.25rem;
+    max-width: 28em;
+}
+
+
+
+//^ --- Headings --- //
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: $spacing;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    text-align: left;
+    color: color('greys.generic-5');
+    font-weight: fw(medium);
+}
+
+
+h1 {
+    font-size: fs(head-1);
+    text-align: center;
+}
+
+
+h2 {
+    font-size: fs(head-2);
+}
+
+
+h3 {
+    font-size: fs(head-3);
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: fs(head-4);
+}
+
+
+.subheading {
+    font-size: fs(lg-1);
+    color: color('primary.dark-2');
+    font-weight: fw(medium);
+    margin-bottom: .8rem;
+}
+
+
+//^ ---  --- //

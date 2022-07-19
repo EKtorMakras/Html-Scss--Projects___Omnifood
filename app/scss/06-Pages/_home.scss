@@ -1,0 +1,151 @@
+@use '../01-Abstracts'as *;
+
+
+
+//$ *******************  Hero  ******************* $//
+
+.hero {
+
+    background-color: color('white-2');
+
+
+    &__item-container {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 5rem;
+        align-items: center;
+    }
+
+
+    &__text-box {
+        @include flex(column, flex-start, flex-start);
+        gap: 2.5rem;
+    }
+
+
+    &__title {
+        text-align: left;
+        font-weight: fw(bold);
+        color: color('greys.generic-4');
+        line-height: 1;
+        letter-spacing: initial;
+    }
+
+
+    &__para {
+        font-size: fs(lg-1);
+        color: inherit;
+        margin-bottom: 3rem;
+    }
+
+
+    &__link-wrapper {
+        @include flex(row, center, center);
+        gap: 2.5rem;
+    }
+
+
+    &__link {
+        white-space: nowrap;
+        line-height: 1;
+
+        span {
+            font-size: 2.3rem;
+        }
+    }
+
+
+    &__delivered {
+
+
+        &-meals {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 5rem;
+        }
+
+
+        &-imgs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-img {
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            border: 2px solid color('white-2');
+
+            &:not(:last-child) {
+                margin-right: -1.8rem;
+            }
+        }
+
+        &-text {
+            font-size: fs(sm-3);
+            font-weight: fw(medium);
+            margin-bottom: 0;
+            color: color('greys.generic-4');
+
+
+            span {
+                color: color('primary.dark-1');
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+//$ *******************  End Of Hero  ******************* $//
+
+
+
+//$ *******************  How  ******************* $//
+
+.how {
+
+    &__heading {
+        margin-bottom: 10rem;
+    }
+
+
+    &__steps {
+
+
+        &-text {
+
+            @include flex(column, start, start);
+            gap: 1.5rem;
+
+
+            &--number {
+                font-size: 8rem;
+                color: lighten(color('greys.generic-4'), 50%);
+                font-weight: fw(semi-bold);
+                line-height: 1;
+            }
+
+            &--title {
+
+                margin-bottom: 2rem;
+
+                span {
+                    font-size: fs(lg-2);
+                    letter-spacing: .5px;
+                }
+            }
+        }
+
+
+        &-img {
+            width: 40%;
+
+            &-wrapper {
+                @include flex;
+            }
+        }
+    }
+}
+
+//$ *******************  End Of How  ******************* $//

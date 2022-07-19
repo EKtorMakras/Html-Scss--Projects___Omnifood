@@ -1,0 +1,69 @@
+@use '../01-Abstracts'as *;
+
+
+.btn {
+
+    //^ Generic buttons //
+
+    &,
+    &:link,
+    &:visited {
+
+        @include transition(all, .2s, ease);
+        @include darkenBgColor(color('primary.base'));
+
+        display: inline-block;
+        padding: 1em 2.2rem;
+        color: #fff;
+
+        text-transform: unset;
+        font-size: fs(sm-3);
+        font-weight: fw(medium);
+        letter-spacing: .5px;
+
+        border-radius: 12px;
+        box-shadow: shadow(lg-1);
+        border: none;
+        cursor: pointer;
+    }
+
+
+    &:active,
+    &:focus {
+        transform: translateY(1px);
+        box-shadow: shadow(lg-2);
+        outline: none;
+    }
+
+
+    // &--full {
+
+
+    //     &,
+    //     &:link,
+    //     &:visited {}
+    // }
+
+
+    &--outline {
+
+
+        &,
+        &:link,
+        &:visited {
+            background-color: #fff;
+            color: color('greys.generic-3');
+            border-radius: 5px;
+            padding: .7em 1.1em;
+            font-size: fs(sm-3);
+            box-shadow: shadow(sm-3);
+            outline: 1px solid transparent;
+
+            &:hover {
+                box-shadow: shadow(rg-1);
+                background-color: color('white-2');
+                outline: 1px solid color('greys.generic-3');
+            }
+        }
+    }
+}
