@@ -110,8 +110,8 @@ function browserSyncReload(cb) {
 
 //$ ************** Watch Task ************** //
 function watchTask() {
-    watch('*.html', browserSyncReload, buildCssTask);
-    watch(['./app/scss/**/*.scss', './app/js/**/*.js'], series(scssTask, jsTask, browserSyncReload, buildCssTask))
+    watch('*.html', browserSyncReload);
+    watch(['./app/scss/**/*.scss', './app/js/**/*.js'], series(scssTask, jsTask, browserSyncReload))
 }
 
 

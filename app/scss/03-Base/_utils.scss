@@ -4,7 +4,7 @@
 .container {
     max-width: $max-width;
     @include center-mar;
-    padding: 5rem 5.5rem 8rem;
+    padding: 0 4rem;
 
 }
 
@@ -54,4 +54,14 @@
         column-gap: gap(lg-3);
         row-gap: gap(lg-6);
     }
+}
+
+
+.grid--center-v {
+    align-items: center;
+
+}
+
+.grid--center-h {
+    justify-items: center;
 }

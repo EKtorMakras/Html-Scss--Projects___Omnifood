@@ -1,6 +1,6 @@
 @use 'sass:list';
 @use 'variables'as *;
-
+@use 'functions'as *;
 
 
 //% ***************  General  *************** //
@@ -150,12 +150,13 @@
 //@ ************  Custom Widths  ************ //
 
 $break-points: ( // 
-    "phone-small": 40em,
-    "phone-big": 60em,
-    "tablet-port": 80em,
-    "tablet-land": 100em,
-    "desktop": 130em,
-    "desktop-big": 180em);
+    "phone-small": em(400),
+    "phone-big": em(600),
+    "tablet-port": em(800),
+    "tablet-land": em(1000),
+    "desktop": em(1300),
+    "desktop-big": em(1800),
+);
 
 
 @function break-points($break-point-limit) {
@@ -183,16 +184,16 @@ $break-points: ( //
 
 
     // 800px
-    @if $breakpoint==tab-port {
-        @media screen and (max-width:break-points(tab-port)) {
+    @if $breakpoint==tablet-port {
+        @media screen and (max-width:break-points(tablet-port)) {
             @content;
         }
     }
 
 
     // 1000px
-    @if $breakpoint==tab-land {
-        @media screen and (min-width:break-points(tab-land)) {
+    @if $breakpoint==tablet-land {
+        @media screen and (min-width:break-points(tablet-land)) {
             @content;
         }
     }

@@ -1,6 +1,5 @@
-// @use 'variables'as *;
-@use "sass:list";
-@use "sass:map";
+@use 'sass:math';
+
 
 
 // Get values of nested map
@@ -62,4 +61,19 @@
     }
 
     @return append($result, $string);
+}
+
+
+
+
+
+// Convert px to em
+@function em($pixels, $context: 16) {
+    @return (math.div($pixels, $context)) * 1em;
+}
+
+
+// Convert px to rem
+@function rem($pixels, $context: 16) {
+    @return (math.div($pixels, $context)) * 1rem;
 }

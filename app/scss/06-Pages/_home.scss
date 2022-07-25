@@ -1,4 +1,5 @@
 @use '../01-Abstracts'as *;
+@use 'sass:math';
 
 
 
@@ -7,6 +8,7 @@
 .hero {
 
     background-color: color('white-2');
+    padding: calc($padding/2) 0 $padding 0;
 
 
     &__item-container {
@@ -101,9 +103,44 @@
 
 
 
+
+//$ *******************  Featured-in  ******************* $//
+
+.featured-in {
+
+    padding: $padding 0;
+
+    &__heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: fs(sm-1);
+        margin-bottom: 2.4rem;
+        opacity: .6;
+    }
+
+
+    &__logos {
+        @include flex(row, space-around, center);
+    }
+
+
+    &__logo {
+        height: 3rem;
+        filter: brightness(0);
+        opacity: .4;
+    }
+}
+
+//$ *******************  End of Featured-in  ******************* $//
+
+
+
+
 //$ *******************  How  ******************* $//
 
 .how {
+
+    padding: $padding-section;
 
     &__heading {
         margin-bottom: 10rem;
@@ -139,13 +176,175 @@
 
 
         &-img {
-            width: 40%;
+            width: 45%;
+
+            @include respond(tablet-land) {
+                width: 38%;
+            }
 
             &-wrapper {
                 @include flex;
+                position: relative;
+
+                &::before {
+
+                    $size: 60%;
+
+                    content: '';
+                    display: block;
+                    background-color: color('primary.light-1-a');
+                    border-radius: 50%;
+                    @include center-pos;
+                    z-index: -1;
+
+                    width: $size;
+                    // Use instead of height
+                    padding-bottom: $size;
+                }
+
+
+                &::after {
+
+                    $size: 85%;
+
+                    content: '';
+                    display: block;
+                    background-color: color('white-2');
+                    border-radius: 50%;
+                    @include center-pos;
+                    z-index: -2;
+
+                    width: $size;
+                    // Use instead of height
+                    padding-bottom: $size;
+                }
             }
         }
     }
 }
 
 //$ *******************  End Of How  ******************* $//
+
+
+
+
+//$ *******************  Meals  ******************* $//
+
+.meals {
+    padding: $padding 0;
+
+
+    // Heading
+    &__heading {
+        text-align: center;
+        margin-bottom: 9rem;
+
+        &--main {
+            text-align: center;
+        }
+    }
+
+
+    // Content
+    &__feature {
+
+        &-img {
+
+            &-wrapper {}
+        }
+
+
+        &-content {
+            padding: 2.5rem 3rem 3rem 3rem;
+
+        }
+
+
+        &-tag {
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: .3rem .7rem;
+            border-radius: 15px;
+            color: color('greys.generic-5');
+            font-weight: fw(semi-bold);
+
+
+            &-group {
+                @include flex(row, start, center);
+                gap: 1rem;
+                margin-bottom: .7rem;
+            }
+
+            &--vegetarian {
+                background-color: color('green-base');
+            }
+
+            &--vegan {
+                background-color: color('green-light');
+            }
+
+            &--paleo {
+                background-color: color('yellow-base');
+            }
+        }
+
+
+        &-title {
+            font-size: 2rem;
+            font-weight: fw(semi-bold);
+            letter-spacing: normal;
+            margin-bottom: 2rem;
+        }
+
+
+        &-stats {
+            @include flex(column, center, start);
+            align-content: space-between;
+            gap: 1.2rem
+        }
+
+
+        &-stat {
+            @include flex(row, start, center);
+            gap: 1.5rem;
+
+            &--icon {}
+
+            &--text {
+                font-size: fs(sm-2);
+            }
+        }
+    }
+
+
+    &__diets {
+
+
+        &-title {
+            font-size: 2rem;
+            font-weight: fw(semi-bold);
+            letter-spacing: normal;
+            margin-bottom: 2rem;
+        }
+
+
+        &-list {}
+
+
+        &-item {
+
+
+            &--icon {}
+
+            &--text {}
+        }
+    }
+
+
+    // btn
+    &__btn {
+        text-align: center;
+    }
+}
+
+//$ *******************  End Of Meals  ******************* $//

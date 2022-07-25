@@ -18,8 +18,11 @@ $colors: ( //
     "red-dark": #842029,
     "red-light": #f8d7da,
 
+    "yellow-base":#ffd43b,
+
+    "green-base":#51cf66,
+    "green-light":#94d82d,
     "green-dark": #0f5132,
-    "green-light": #d1e7dd,
 
     //% ***************    *************** //
 
@@ -68,7 +71,8 @@ $colors: ( //
         "base": hsl(28, 80%, 52%),
 
         // Light Shades
-        "light-1": #e3ba96,
+        "light-1-a": hsl(28, 58%, 90%),
+        "light-1": hsl(28, 58%, 74%),
         "light-2": hsl(28, 58%, 65%),
         "light-3": hsl(28, 58%, 56%),
         "light-4": hsl(28, 58%, 48%),
@@ -158,8 +162,8 @@ color('greys.light-9');
 $font-sizes: ( //
 
     // Text
-    "sm-1": clamp(1.3rem, 1.1rem + 0.2vw, 1.5rem),
-    "sm-2": clamp(1.5rem, 1.2rem + 0.3vw, 1.7rem),
+    "sm-1": clamp(1.2rem, 1.1rem + 0.2vw, 1.5rem),
+    "sm-2": clamp(1.4rem, 1.2rem + 0.3vw, 1.7rem),
     "sm-3": clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem),
     "rg": clamp(1.9rem, 1.5rem + 0.5vw, 2rem),
     "lg-1": clamp(2rem, 1.7rem + 0.6vw, 2.3rem),
@@ -256,7 +260,8 @@ $spacing: 1.2px;
 $radius: 3px;
 $transition: all 0.3s ease;
 $max-width: 130rem;
-
+$padding:6rem;
+$padding-section:$padding 0;
 
 $gaps : ( // 
 
