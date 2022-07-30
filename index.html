@@ -172,7 +172,7 @@
 
 
       <!--% **** Content ****  -->
-      <div class="how__steps grid--2-cols grid--center-v">
+      <div class="how__steps grid-col-2 col-gap-5 row-gap-7 grid-center-v">
 
 
         <!-- Step 01 -->
@@ -265,20 +265,20 @@
 
       <span class="meals__heading--sub subheading">Meals</span>
 
-      <h2 class="meals__heading--main">Omnifood AI chooses from 5,000+ recipes</h2>
+      <h2 class="meals__heading--main text-center">Omnifood AI chooses from 5,000+ recipes</h2>
 
     </div>
 
 
     <!--% **** Content ****  -->
-    <div class="meals__features grid--3-cols container">
+    <div class="meals__features grid-col-3 col-gap-5 row-gap-6 container">
 
 
       <!-- Meal 1 -->
       <div class="meals__feature">
 
         <div class="meals__feature-img-wrapper">
-          <img src="./dist/img/meals/meal-1.jpg" alt="" class="meals__feature-img">
+          <img src="./dist/img/meals/meal-1.jpg" alt="Japanese Gyozas" class="meals__feature-img">
         </div>
 
         <div class="meals__feature-content">
@@ -292,18 +292,41 @@
           <ul class="meals__feature-stats">
 
             <li class="meals__feature-stat">
-              <span class="meals__feature-stat--icon"></span>
-              <div class="meals__feature-stat--text">Calories: <strong>650</strong></div>
+
+              <span class="meals__feature-stat--icon">
+                <ion-icon name="flame-outline"></ion-icon>
+              </span>
+
+              <div class="meals__feature-stat--text">
+                Calories: <strong>650</strong>
+              </div>
+
             </li>
 
-            <li class="meals__feature-stat">
-              <span class="meals__feature-stat--icon"></span>
-              <div class="meals__feature-stat--text">NutriScore : <strong>74</strong></div>
-            </li>
 
             <li class="meals__feature-stat">
-              <span class="meals__feature-stat--icon"></span>
-              <div class="meals__feature-stat--text"><strong>4.7</strong> rating(354)</div>
+
+              <span class="meals__feature-stat--icon">
+                <ion-icon name="restaurant-outline"></ion-icon>
+              </span>
+
+              <div class="meals__feature-stat--text">
+                NutriScore &reg; <strong>74</strong>
+              </div>
+
+            </li>
+
+
+            <li class="meals__feature-stat">
+
+              <span class="meals__feature-stat--icon">
+                <ion-icon name="star-outline"></ion-icon>
+              </span>
+
+              <div class="meals__feature-stat--text">
+                <strong>4.7</strong> rating <small>(354)</small>
+              </div>
+
             </li>
 
           </ul>
@@ -318,7 +341,7 @@
       <div class="meals__feature">
 
         <div class="meals__feature-img-wrapper">
-          <img src="./dist/img/meals/meal-2.jpg" alt="" class="meals__feature-img">
+          <img src="./dist/img/meals/meal-2.jpg" alt="Avocado Salad" class="meals__feature-img">
         </div>
 
         <div class="meals__feature-content">
@@ -330,21 +353,44 @@
 
           <h4 class="meals__feature-title">Avocado Salad</h4>
 
+
           <ul class="meals__feature-stats">
 
             <li class="meals__feature-stat">
-              <span class="meals__feature-stat--icon"></span>
-              <div class="meals__feature-stat--text">Calories: <strong>400</strong></div>
+
+              <span class="meals__feature-stat--icon">
+                <ion-icon name="flame-outline"></ion-icon>
+              </span>
+
+              <div class="meals__feature-stat--text">
+                Calories: <strong>400</strong>
+              </div>
             </li>
 
-            <li class="meals__feature-stat">
-              <span class="meals__feature-stat--icon"></span>
-              <div class="meals__feature-stat--text">NutriScore : <strong>92</strong></div>
-            </li>
 
             <li class="meals__feature-stat">
-              <span class="meals__feature-stat--icon"></span>
-              <div class="meals__feature-stat--text"><strong>4.6</strong> rating(420)</div>
+
+              <span class="meals__feature-stat--icon">
+                <ion-icon name="restaurant-outline"></ion-icon>
+              </span>
+
+              <div class="meals__feature-stat--text">
+                NutriScore &reg; <strong>92</strong>
+              </div>
+
+            </li>
+
+
+            <li class="meals__feature-stat">
+
+              <span class="meals__feature-stat--icon">
+                <ion-icon name="star-outline"></ion-icon>
+              </span>
+
+              <div class="meals__feature-stat--text">
+                <strong>4.6</strong> rating <small>(420)</small>
+              </div>
+
             </li>
 
           </ul>
@@ -360,52 +406,69 @@
 
         <h4 class="meals__diets-title">Works with any diet :</h4>
 
-
         <ul class="meals__diets-list">
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Vegetarian</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text"> Vegan
             </span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Pescatarian</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Gluten-free</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Lactose-free</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Keto</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Paleo</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Low FODMAP</span>
           </li>
 
           <li class="meals__diets-item">
-            <span class="meals__diets-item--icon"></span>
+            <span class="meals__diets-item--icon">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </span>
             <span class="meals__diets-item--text">Kid-friendly</span>
           </li>
 
@@ -418,11 +481,51 @@
     </div>
 
 
-    <div class="meals__btn">See all recipes</div>
+    <div class="meals__btn">
+      <a href="#" class="meals__btn-link">
+        See all recipes &RightArrow;
+      </a>
+    </div>
 
 
   </section>
   <!-- $ *******************  End Of Meals Section  ******************* $ -->
+
+
+
+
+  <!-- $ *******************  Testimonials-Gallery Section  ******************* $ -->
+
+  <section class="testimonials-gallery">
+
+
+    <!-- @ ************  Testimonials  ************  -->
+
+    <div class="testimonials">
+
+
+      <!--% **** Heading ****  -->
+      <div class="testimonials__heading container">
+
+        <span class="testimonials__heading--sub subheading">Testimonials</span>
+
+        <h2 class="testimonials__heading--main">Omnifood AI chooses from 5,000+ recipes</h2>
+
+      </div>
+
+
+      <!--% **** Content ****  -->
+
+
+
+    </div>
+    <!-- @ ************  End Of Testimonials  ************  -->
+
+
+  </section>
+
+
+  <!-- $ *******************  End Of Testimonials-Gallery Section  ******************* $ -->
 
 
 
@@ -441,7 +544,8 @@
   <!--* ***************************************  End Of Footer  *************************************** -->
 
 
-
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="./dist/js/main.js"></script>
 
 </body>
@@ -462,6 +566,7 @@
 
 <!-- $ *******************  Comment  ******************* $ -->
 <!-- $ *******************  End Of Comment  ******************* $ -->
+<!-- $ ===================  Comment  =================== $ -->
 
 
 <!-- % ***************  Comment  ***************  -->

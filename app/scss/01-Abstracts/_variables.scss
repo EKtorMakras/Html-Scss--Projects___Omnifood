@@ -123,7 +123,7 @@ $colors: ( //
     @return deep-map-get($map, $keys...);
 }
 
-
+$clr-primary:color('primary.base');
 
 //^ *****  Color Schemes  ***** //
 
@@ -173,7 +173,7 @@ $font-sizes: ( //
 
     // Headings
     "head-1": 4.8rem,
-    "head-2": 4.2rem,
+    "head-2": 4rem,
     "head-3": 3rem,
     "head-4": 2.8rem);
 

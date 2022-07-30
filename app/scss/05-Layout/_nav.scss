@@ -22,7 +22,7 @@
         &:visited {
             color: color('greys.generic-5');
             font-weight: fw(medium);
-            font-size: fs(lg-1);
+            font-size: fs(sm-3);
             @include transition(all, .3s, ease-in-out);
         }
 
@@ -46,7 +46,7 @@
 
     &:link,
     &:visited {
-        padding: 1.1rem 2.3rem;
+        padding: .7rem 1.8rem;
         color: color('greys.light-9');
         @include darkenBgColor(color('primary.base'));
         border-radius: 12px;

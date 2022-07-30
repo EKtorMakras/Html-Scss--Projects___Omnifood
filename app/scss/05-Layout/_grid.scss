@@ -1,1 +1,51 @@
 @use '../01-Abstracts'as *;
+
+
+// Generate custom grid systems 
+
+@for $i from 2 through 12 {
+    .grid-col-#{$i} {
+        display: grid;
+        grid-template-columns: repeat(#{$i}, 1fr);
+    }
+}
+
+
+// Gaps
+
+$grid-gap:1rem;
+
+
+@for $i from 1 through 10 {
+
+    .gap-#{$i} {
+        gap: #{$i}rem;
+    }
+}
+
+
+@for $i from 1 through 10 {
+
+    .col-gap-#{$i} {
+        column-gap: #{$i}rem;
+    }
+}
+
+
+@for $i from 1 through 10 {
+
+    .row-gap-#{$i} {
+        row-gap: #{$i}rem;
+    }
+}
+
+
+// Placing Items
+
+.grid-center-v {
+    align-items: center;
+}
+
+.grid-center-h {
+    justify-items: center;
+}

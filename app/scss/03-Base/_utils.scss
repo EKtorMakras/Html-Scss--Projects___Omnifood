@@ -16,7 +16,7 @@
 
 
 // center text
-.u-center-text {
+.text-center {
     text-align: center;
 }
 
@@ -41,27 +41,4 @@
         margin-bottom: 4rem;
         text-align: center;
     }
-}
-
-
-// Grid
-
-@for $i from 2 through 4 {
-
-    .grid--#{$i}-cols {
-        display: grid;
-        grid-template-columns: repeat(#{$i}, 1fr);
-        column-gap: gap(lg-3);
-        row-gap: gap(lg-6);
-    }
-}
-
-
-.grid--center-v {
-    align-items: center;
-
-}
-
-.grid--center-h {
-    justify-items: center;
 }

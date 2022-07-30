@@ -108,7 +108,7 @@
 
 .featured-in {
 
-    padding: $padding 0;
+    padding: $padding * 1.2 0;
 
     &__heading {
         text-transform: uppercase;
@@ -121,11 +121,12 @@
 
     &__logos {
         @include flex(row, space-around, center);
+        gap: 1.5rem;
     }
 
 
     &__logo {
-        height: 3rem;
+        height: 2.4rem;
         filter: brightness(0);
         opacity: .4;
     }
@@ -231,22 +232,34 @@
 //$ *******************  Meals  ******************* $//
 
 .meals {
-    padding: $padding 0;
+    padding: $padding 0 $padding * 1.8 0;
 
 
     // Heading
     &__heading {
         text-align: center;
         margin-bottom: 9rem;
-
-        &--main {
-            text-align: center;
-        }
     }
 
 
     // Content
+    &__features {
+        margin-bottom: 4rem;
+    }
+
+
     &__feature {
+
+        box-shadow: shadow(lg-1);
+        transition: all .4s ease-out;
+        border-radius: 12px;
+        overflow: hidden;
+
+
+        &:hover {
+            transform: translateY(-1rem);
+            box-shadow: shadow(lg-2);
+        }
 
         &-img {
 
@@ -308,7 +321,10 @@
             @include flex(row, start, center);
             gap: 1.5rem;
 
-            &--icon {}
+            &--icon {
+                @include center-flex;
+                color: $clr-primary;
+            }
 
             &--text {
                 font-size: fs(sm-2);
@@ -319,6 +335,7 @@
 
     &__diets {
 
+        // box-shadow: shadow(rg-2);
 
         &-title {
             font-size: 2rem;
@@ -328,13 +345,24 @@
         }
 
 
-        &-list {}
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
 
 
         &-item {
 
+            font-size: 1.6rem;
+            @include flex(row, start, center);
+            gap: 2rem;
 
-            &--icon {}
+            &--icon {
+                @include center-flex;
+                color: $clr-primary;
+                font-size: 2.5rem;
+            }
 
             &--text {}
         }
@@ -344,7 +372,48 @@
     // btn
     &__btn {
         text-align: center;
+
+
+        &-link {
+            position: relative;
+            color: $clr-primary;
+            font-size: fs(rg);
+            transition: all .4s ease-out;
+
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 1px;
+                background-color: $clr-primary;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: width .4s ease-in-out;
+            }
+
+
+            &:hover {
+                color: darken($clr-primary, 7%);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
     }
 }
 
+//$ *******************  End Of Meals  ******************* $//
+
+
+
+
+//$ *******************  Testimonials-Gallery  ******************* $//
+//$ *******************  End Of Testimonials-Gallery  ******************* $//
+
+
+
+
+//$ *******************  Meals  ******************* $//
 //$ *******************  End Of Meals  ******************* $//
