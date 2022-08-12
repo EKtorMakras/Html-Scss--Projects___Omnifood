@@ -143,9 +143,7 @@
 
     padding: $padding-section;
 
-    &__heading {
-        margin-bottom: 10rem;
-    }
+    &__heading {}
 
 
     &__steps {
@@ -238,7 +236,6 @@
     // Heading
     &__heading {
         text-align: center;
-        margin-bottom: 9rem;
     }
 
 
@@ -261,10 +258,6 @@
             box-shadow: shadow(lg-2);
         }
 
-        &-img {
-
-            &-wrapper {}
-        }
 
 
         &-content {
@@ -410,8 +403,131 @@
 
 
 //$ *******************  Testimonials-Gallery  ******************* $//
+
+//@ ************  Testimonials  ************ //
+
+.testimonials-gallery {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    background-color: color(white-2);
+    gap: 7rem;
+}
+
+
+.testimonials-container {
+    padding: 7rem;
+    padding-right: 0;
+}
+
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 6rem;
+    column-gap: 8rem;
+}
+
+
+.testimonial {
+
+
+
+    &__img {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+
+
+    &__text {
+        font-size: fs(sm-3);
+        line-height: 1.8;
+
+        &--name {
+            margin-top: 1.7rem;
+            font-size: fs(sm-2);
+            color: #777;
+        }
+    }
+}
+
+//@ ************  End Of Testimonials  ************ //
+
+
+//@ ************  Gallery  ************ //
+
+.gallery {
+    gap: 2rem;
+    padding: 2rem;
+
+
+    &__img {
+        filter: grayscale(20%);
+        transition: all .4s;
+        display: block;
+
+        &:hover {
+            transform: scale(1.1);
+            filter: grayscale(60%);
+        }
+
+        &-wrapper {
+            overflow: hidden;
+        }
+    }
+}
+
+//@ ************  End Of Gallery  ************ //
+
+
 //$ *******************  End Of Testimonials-Gallery  ******************* $//
 
+
+
+
+//$ *******************  Pricing-Features  ******************* $//
+
+.pricing-features {
+    padding: 9rem 0;
+}
+
+//@ ************  Pricing  ************ //
+
+.pricing {
+
+    &__heading {
+        padding-left: 7rem;
+    }
+
+
+    &__cards {}
+
+
+    &__card {
+
+        &-header {}
+
+        &-title {}
+
+
+        &-price {}
+
+
+
+    }
+
+}
+
+//@ ************  End Of Pricing  ************ //
+
+
+//@ ************  Features  ************ //
+//@ ************  End Of Features  ************ //
+
+
+
+//$ *******************  End Of Pricing-Features  ******************* $//
 
 
 

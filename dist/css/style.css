@@ -140,6 +140,10 @@ h4 {
   text-transform: uppercase;
 }
 
+div[class*=__heading] {
+  margin-bottom: 9rem;
+}
+
 .btn, .btn:link, .btn:visited {
   transition: all 0.2s ease;
   background-color: hsl(28deg, 80%, 52%);
@@ -509,9 +513,6 @@ h4 {
 .how {
   padding: 6rem 0;
 }
-.how__heading {
-  margin-bottom: 10rem;
-}
 .how__steps-text {
   display: flex;
   flex-direction: column;
@@ -581,7 +582,6 @@ h4 {
 }
 .meals__heading {
   text-align: center;
-  margin-bottom: 9rem;
 }
 .meals__features {
   margin-bottom: 4rem;
@@ -706,5 +706,65 @@ h4 {
 }
 .meals__btn-link:hover::after {
   width: 100%;
+}
+
+.testimonials-gallery {
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  background-color: #fdf2e9;
+  gap: 7rem;
+}
+
+.testimonials-container {
+  padding: 7rem;
+  padding-right: 0;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 6rem;
+  column-gap: 8rem;
+}
+
+.testimonial__img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.testimonial__text {
+  font-size: clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem);
+  line-height: 1.8;
+}
+.testimonial__text--name {
+  margin-top: 1.7rem;
+  font-size: clamp(1.4rem, 1.2rem + 0.3vw, 1.7rem);
+  color: #777;
+}
+
+.gallery {
+  gap: 2rem;
+  padding: 2rem;
+}
+.gallery__img {
+  filter: grayscale(20%);
+  transition: all 0.4s;
+  display: block;
+}
+.gallery__img:hover {
+  transform: scale(1.1);
+  filter: grayscale(60%);
+}
+.gallery__img-wrapper {
+  overflow: hidden;
+}
+
+.pricing-features {
+  padding: 9rem 0;
+}
+
+.pricing__heading {
+  padding-left: 7rem;
 }
 /*# sourceMappingURL=style.css.map */
