@@ -86,6 +86,39 @@ img {
   text-align: center;
 }
 
+.meals__diets-list, .pricing__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.meals__diets-item, .pricing__card-item {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+.meals__diets-item *[class*=icon], .pricing__card-item *[class*=icon] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: hsl(28deg, 80%, 52%);
+  font-size: 2.5rem;
+}
+
+.pricing__card-btn:link, .nav-cta:link, .pricing__card-btn:visited, .nav-cta:visited {
+  padding: 0.7rem 1.8rem;
+  color: #f1f5f8;
+  background-color: hsl(28deg, 80%, 52%);
+  border-radius: 12px;
+}
+.pricing__card-btn:link:hover, .nav-cta:link:hover, .pricing__card-btn:link:active, .nav-cta:link:active, .pricing__card-btn:visited:hover, .nav-cta:visited:hover, .pricing__card-btn:visited:active, .nav-cta:visited:active {
+  background-color: #d36f17;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: clamp(1.9rem, 1.5rem + 0.5vw, 2rem);
@@ -201,16 +234,6 @@ div[class*=__heading] {
   outline: 1px solid #324d67;
   outline-offset: 1rem;
   transition: none;
-}
-
-.nav-cta:link, .nav-cta:visited {
-  padding: 0.7rem 1.8rem;
-  color: #f1f5f8;
-  background-color: hsl(28deg, 80%, 52%);
-  border-radius: 12px;
-}
-.nav-cta:link:hover, .nav-cta:link:active, .nav-cta:visited:hover, .nav-cta:visited:active {
-  background-color: #d36f17;
 }
 
 .header {
@@ -660,27 +683,6 @@ div[class*=__heading] {
   font-weight: 600;
   letter-spacing: normal;
   margin-bottom: 2rem;
-}
-.meals__diets-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.meals__diets-item {
-  font-size: 1.6rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  gap: 2rem;
-}
-.meals__diets-item--icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: hsl(28deg, 80%, 52%);
-  font-size: 2.5rem;
 }
 .meals__btn {
   text-align: center;

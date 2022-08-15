@@ -1,4 +1,5 @@
 @use '../01-Abstracts'as *;
+@use '../03-Base'as *;
 
 
 
@@ -44,11 +45,5 @@
 
 .nav-cta {
 
-    &:link,
-    &:visited {
-        padding: .7rem 1.8rem;
-        color: color('greys.light-9');
-        @include darkenBgColor(color('primary.base'));
-        border-radius: 12px;
-    }
+    @extend %cta;
 }

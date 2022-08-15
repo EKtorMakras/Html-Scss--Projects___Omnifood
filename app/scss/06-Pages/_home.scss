@@ -1,4 +1,5 @@
 @use '../01-Abstracts'as *;
+@use '../03-Base'as *;
 @use 'sass:math';
 
 
@@ -339,25 +340,12 @@
 
 
         &-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            @extend %list;
         }
 
 
         &-item {
-
-            font-size: 1.6rem;
-            @include flex(row, start, center);
-            gap: 2rem;
-
-            &--icon {
-                @include center-flex;
-                color: $clr-primary;
-                font-size: 2.5rem;
-            }
-
-            &--text {}
+            @extend %list-item;
         }
     }
 
@@ -511,9 +499,27 @@
         &-title {}
 
 
-        &-price {}
+        &-price {
+
+            &--amount {}
+
+            &--text {}
+        }
 
 
+        &-list {
+            @extend %list;
+        }
+
+
+        &-item {
+            @extend %list-item;
+        }
+
+
+        &-btn {
+            @extend %cta;
+        }
 
     }
 

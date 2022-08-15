@@ -42,3 +42,36 @@
         text-align: center;
     }
 }
+
+
+%list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+%list-item {
+    font-size: 1.6rem;
+    @include flex(row, start, center);
+    gap: 2rem;
+
+
+    & *[class*='icon'] {
+        @include center-flex;
+        color: $clr-primary;
+        font-size: 2.5rem;
+    }
+}
+
+
+%cta {
+
+    &:link,
+    &:visited {
+        padding: .7rem 1.8rem;
+        color: color('greys.light-9');
+        @include darkenBgColor(color('primary.base'));
+        border-radius: 12px;
+    }
+}
