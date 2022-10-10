@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 0.8rem rgba(231, 126, 35, 0.5);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -100,6 +106,9 @@ img {
   align-items: center;
   gap: 2rem;
 }
+.meals__diets-item p, .pricing__card-item p {
+  margin-bottom: 0;
+}
 .meals__diets-item *[class*=icon], .pricing__card-item *[class*=icon] {
   display: flex;
   justify-content: center;
@@ -131,7 +140,6 @@ p {
   font-size: clamp(1.9rem, 1.5rem + 0.5vw, 2rem);
   line-height: 1.7;
   color: inherit;
-  margin-bottom: 1.25rem;
   max-width: 28em;
 }
 
@@ -195,7 +203,7 @@ div[class*=__heading] {
 .btn:hover, .btn:active, .btn:link:hover, .btn:link:active, .btn:visited:hover, .btn:visited:active {
   background-color: #d36f17;
 }
-.btn:active, .btn:focus {
+.btn:active {
   transform: translateY(1px);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.19);
   outline: none;
@@ -229,12 +237,6 @@ div[class*=__heading] {
 .main-nav__link:hover {
   color: hsl(28deg, 80%, 52%);
 }
-.main-nav__link:focus {
-  border: none;
-  outline: 1px solid #324d67;
-  outline-offset: 1rem;
-  transition: none;
-}
 
 .header {
   padding: 2rem 0;
@@ -254,6 +256,75 @@ div[class*=__heading] {
   height: 3rem;
 }
 
+.footer__container {
+  padding: 13rem 0 9rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1.2rem 1.5rem;
+}
+.footer__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__nav-link:link, .footer__nav-link:visited {
+  font-size: 1.6rem;
+  color: #767676;
+}
+.footer__nav-link:hover, .footer__nav-link:active {
+  color: #505050;
+}
+.footer__logo-img {
+  height: 2rem;
+}
+.footer__logo-img-wrapper {
+  margin-bottom: 3.5rem;
+}
+.footer__social-list {
+  display: flex;
+  gap: 3rem;
+}
+.footer__social-link {
+  color: #777;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+.footer__social-link:hover {
+  color: #555;
+}
+.footer__copy {
+  font-size: clamp(1.4rem, 1.2rem + 0.3vw, 1.7rem);
+  margin-bottom: 0;
+  margin-top: auto;
+  max-width: 18rem;
+}
+.footer__contact-address {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer__contact-address-para {
+  font-size: clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem);
+  line-height: 1.6;
+}
+.footer__contact-address-para:nth-child(2) {
+  margin-top: auto;
+}
+.footer__contact-address-para a {
+  font-size: clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem);
+  color: #777;
+}
 .grid-col-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -764,9 +835,187 @@ div[class*=__heading] {
 
 .pricing-features {
   padding: 9rem 0;
+  display: grid;
+  row-gap: 10rem;
 }
 
 .pricing__heading {
   padding-left: 7rem;
+}
+.pricing__card {
+  padding: 4rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.19);
+  max-width: 50rem;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 40rem;
+  display: grid;
+  row-gap: 3.5rem;
+}
+.pricing__card--starter {
+  justify-self: end;
+}
+.pricing__card--pro {
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+.pricing__card--pro::after {
+  content: "Best Value";
+  position: absolute;
+  top: 7%;
+  right: -20%;
+  background-color: #ffd43b;
+  padding: 6px 8rem;
+  color: #333;
+  transform: rotate(45deg);
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pricing__card-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(28deg, 70%, 43%);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  align-self: end;
+}
+.pricing__card-price {
+  text-align: center;
+  margin-bottom: 0;
+}
+.pricing__card-price--amount {
+  display: block;
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #444;
+}
+.pricing__card-price--amount span {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+.pricing__card-price--text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: #6f6f6f;
+  display: inline-block;
+}
+.pricing__card-list {
+  margin-bottom: 1.5rem;
+  align-self: start;
+  padding-bottom: 2rem;
+}
+.pricing__card-text {
+  font-size: 1.5rem;
+}
+.pricing__card-btn-wrapper {
+  text-align: center;
+  align-self: end;
+}
+.pricing-details {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: unset;
+}
+.pricing-details-container {
+  margin-top: 6rem;
+}
+
+.feature {
+  display: grid;
+  gap: 2rem;
+}
+.feature__title {
+  font-size: 2.4rem;
+  align-self: center;
+}
+.feature__para {
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+.feature__icon > * {
+  color: hsl(28deg, 80%, 52%);
+  height: 3.3rem;
+  width: 3.3rem;
+  padding: 1.7rem;
+  border-radius: 50%;
+  background-color: #fdf2e9;
+}
+
+.cta {
+  padding: 6rem 0;
+}
+.cta__container--inner {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  background-image: linear-gradient(to right bottom, hsl(28deg, 80%, 61%), hsl(28deg, 80%, 52%));
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+}
+.cta__text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: hsl(28deg, 75%, 15%);
+}
+.cta__heading {
+  color: inherit;
+  margin-bottom: 3rem;
+  letter-spacing: 0.8px;
+}
+.cta__para {
+  font-size: clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem);
+}
+.cta__form {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  row-gap: 3rem;
+}
+.cta__form *:focus {
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+.cta__form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.cta__form__label {
+  font-size: clamp(1.7rem, 1.3rem + 0.4vw, 1.8rem);
+}
+.cta__form__input, .cta__form__select {
+  padding: 1rem;
+  width: 100%;
+  font-size: clamp(1.9rem, 1.5rem + 0.5vw, 2rem);
+  font-family: inherit;
+  color: #555;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.12);
+}
+.cta__form__input::placeholder, .cta__form__select::placeholder {
+  color: #aaa;
+}
+.cta__form__btn {
+  align-self: end;
+  background-color: hsl(28deg, 75%, 15%);
+  padding-block: 1.3rem;
+  font-size: clamp(1.9rem, 1.5rem + 0.5vw, 2rem);
+}
+.cta__form__btn:hover {
+  background-color: hsl(28deg, 58%, 20%);
+}
+.cta__img-box {
+  background-image: linear-gradient(to right bottom, rgba(235, 150, 76, 0.5), rgba(231, 126, 35, 0.5)), url(../../../dist/img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 /*# sourceMappingURL=style.css.map */

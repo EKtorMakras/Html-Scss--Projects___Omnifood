@@ -1,1 +1,135 @@
 @use '../01-Abstracts'as *;
+
+
+
+.footer {
+
+   
+
+    &__container{
+        padding: 13rem 0 9rem;
+        display: grid;
+        grid-template-columns: 1.5fr 1.2fr 1fr 1fr 1fr;
+        gap: 4rem;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 1.2rem 1.5rem;
+    }
+
+
+    &__heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: color('greys.generic-3');
+    }
+
+
+    &__nav {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &-link {
+
+            &:link,
+            &:visited {
+                font-size: 1.6rem;
+                color: #767676;
+            }
+
+            &:hover,
+            &:active {
+                color: darken(#767676, 15%);
+            }
+        }
+    }
+
+    // Logo
+    &__logo {
+        
+
+        &-img {
+
+            height: 2rem;
+
+            &-wrapper {
+                margin-bottom: 3.5rem;
+            }
+        }
+    }
+
+
+    &__social-list{
+        display: flex;
+        gap:3rem;
+    }
+
+    &__social-link{
+        color: color('greys.generic-1');
+        font-size: 3rem;
+        transition: $transition;
+
+        &:hover{
+            color: color('greys.generic-3');
+        }
+    }
+
+
+    &__copy{
+        font-size: fs(sm-2);
+        margin-bottom: 0;
+        margin-top: auto;
+        max-width: 18rem;
+    }
+
+
+
+    // Contact
+    &__contact {
+
+        &-address{
+
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            &-para{
+
+                font-size: fs(sm-3);
+                line-height: 1.6;
+
+                &:nth-child(2){
+                    margin-top: auto;
+                }
+
+                a{
+                    font-size: fs(sm-3);
+                    color: color('greys.generic-1');
+                }
+            }
+        }
+    }
+
+
+
+    // Account
+    &__account {}
+
+
+
+    // Company
+    &__logo {}
+
+
+
+    // Resources
+    &__logo {}
+
+
+
+}

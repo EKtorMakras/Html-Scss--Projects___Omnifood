@@ -31,14 +31,6 @@
         &:hover {
             color: color('primary.base');
         }
-
-
-        &:focus {
-            border: none;
-            outline: 1px solid color('greys.dark-6');
-            outline-offset: 1rem;
-            transition: none;
-        }
     }
 }
 

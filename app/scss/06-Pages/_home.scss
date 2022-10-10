@@ -478,6 +478,8 @@
 
 .pricing-features {
     padding: 9rem 0;
+    display: grid;
+    row-gap: 10rem;
 }
 
 //@ ************  Pricing  ************ //
@@ -494,21 +496,95 @@
 
     &__card {
 
-        &-header {}
+        padding: 4rem;
+        box-shadow: shadow(lg-2);
+        max-width: 50rem;
+        border-radius: 12px;
+        width: 85%;
+        max-width: 40rem;
+        display: grid;
+        row-gap: 3.5rem;
 
-        &-title {}
+
+        &--starter {
+            justify-self: end;
+        }
+
+        &--pro {
+            background-color: color('white-2');
+            position: relative;
+            overflow: hidden;
+
+
+            &::after {
+                content: 'Best Value';
+                position: absolute;
+                top: 7%;
+                right: -20%;
+                background-color: color('yellow-base');
+                padding: 6px 8rem;
+
+                color: color('greys.generic-5');
+                transform: rotate(45deg);
+
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: bold;
+                text-transform: uppercase;
+
+            }
+        }
+
+
+        &-header {
+            // margin-bottom: 4.3rem;
+        }
+
+
+        &-title {
+            text-align: center;
+            text-transform: uppercase;
+            color: color('primary.dark-2');
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            align-self: end;
+        }
 
 
         &-price {
+            text-align: center;
+            margin-bottom: 0;
 
-            &--amount {}
+            &--amount {
+                display: block;
+                font-size: 6rem;
+                font-weight: bold;
+                line-height: 1.1;
+                color: color('greys.generic-4');
 
-            &--text {}
+
+                span {
+                    font-size: 2.5rem;
+                    margin-right: 1rem;
+                    font-weight: 400;
+                }
+            }
+
+            &--text {
+                font-size: 1.4rem;
+                line-height: 1.6;
+                letter-spacing: .5px;
+                color: #6f6f6f;
+                display: inline-block;
+            }
         }
 
 
         &-list {
             @extend %list;
+            margin-bottom: 1.5rem;
+            align-self: start;
+            padding-bottom: 2rem;
         }
 
 
@@ -517,18 +593,75 @@
         }
 
 
-        &-btn {
-            @extend %cta;
+        &-text {
+            font-size: 1.5rem;
         }
 
+
+        &-btn {
+            @extend %cta;
+
+            &-wrapper {
+                text-align: center;
+                // margin-top: 5rem;
+                align-self: end;
+            }
+        }
     }
 
+
+    &-details {
+        margin-top: 4rem;
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: unset;
+
+        &-container {
+            margin-top: 6rem;
+        }
+    }
 }
 
 //@ ************  End Of Pricing  ************ //
 
 
 //@ ************  Features  ************ //
+
+.features {}
+
+
+.feature {
+
+    display: grid;
+    gap: 2rem;
+
+
+    &__title {
+        font-size: 2.4rem;
+        align-self: center;
+    }
+
+
+    &__para {
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+
+
+    &__icon {
+        // @include center-flex;
+
+        >* {
+            color: $clr-primary;
+            height: 3.3rem;
+            width: 3.3rem;
+            padding: 1.7rem;
+            border-radius: 50%;
+            background-color: color('white-2');
+        }
+    }
+}
+
 //@ ************  End Of Features  ************ //
 
 
@@ -537,5 +670,110 @@
 
 
 
-//$ *******************  Meals  ******************* $//
-//$ *******************  End Of Meals  ******************* $//
+//$ *******************  Cta  ******************* $//
+.cta {
+
+    padding: $padding-section;
+
+
+    &__container {
+
+        &--inner {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            background-image: linear-gradient(to right bottom, color('primary.light-6'), $clr-primary);
+            box-shadow: shadow(lg-2);
+            border-radius: 12px;
+        }
+
+    }
+
+
+    // Text Box
+    &__text-box {
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+        color: color('primary.dark-6');
+    }
+
+    &__heading {
+        color: inherit;
+        margin-bottom: 3rem;
+        letter-spacing: .8px;
+    }
+
+    &__para {
+        font-size: fs(sm-3);
+    }
+
+
+    &__form {
+        margin-top: 5rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        row-gap: 3rem;
+
+
+        *:focus {
+            box-shadow: 0 0 0 .8rem rgba(color('white-2'), .5);
+        }
+
+        &__input-group {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+
+        &__label {
+            font-size: fs(sm-3);
+
+        }
+
+
+        &__input,
+        &__select {
+            padding: 1rem;
+            width: 100%;
+            font-size: fs(rg);
+            font-family: inherit;
+            color: color('greys.generic-3');
+            border: none;
+            background-color: color('white-2');
+            border-radius: 9px;
+            box-shadow: shadow(sm-3);
+
+            &::placeholder {
+                color: #aaa;
+            }
+        }
+
+
+        &__select {}
+
+        &__btn {
+            align-self: end;
+            background-color: color('primary.dark-6');
+            padding-block: 1.3rem;
+            font-size: fs(rg);
+
+
+            &:hover {
+                background-color: color('primary.dark-4');
+            }
+        }
+    }
+
+
+    // Img Box
+    &__img-box {
+        background-image: linear-gradient(to right bottom, rgba(color('primary.light-6'), .5), rgba($clr-primary, .5)), url(../../../dist/img/eating.jpg);
+        background-size: cover;
+        background-position: center;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+}
+
+//$ *******************  End Of Cta  ******************* $//

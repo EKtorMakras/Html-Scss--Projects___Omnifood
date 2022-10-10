@@ -1,0 +1,99 @@
+@use 'variables'as *;
+@use 'functions'as *;
+
+
+
+
+
+$break-points: ( // 
+    "phone-small": em(400),
+    "phone-big": em(600),
+    "tablet-port": em(800),
+    "tablet-land": em(1000),
+    "desktop": em(1300),
+    "desktop-big": em(1800),
+);
+
+
+@function break-points($break-point-limit) {
+    @return map-get($break-points, $break-point-limit);
+}
+
+
+//@ ************  All Widths  ************ //
+
+@mixin media-min ($width) {
+    @media screen and (min-width:$width) {
+        @content;
+    }
+}
+
+@mixin media-max ($width) {
+    @media screen and (max-width:$width) {
+        @content;
+    }
+}
+
+@mixin media-min-max($min-width, $max-width) {
+    @media screen and (min-width:$min-width) and (max-width:$max-width) {
+        @content;
+    }
+}
+
+//@ ************    ************ //
+
+
+
+//@ ************  Custom Widths  ************ //
+
+@mixin respond($breakpoint) {
+
+    // 400px
+    @if $breakpoint==phone-small {
+        @media screen and (max-width:break-points(phone-small)) {
+            @content;
+        }
+    }
+
+
+    // 600px
+    @if $breakpoint==phone-big {
+        @media screen and (max-width:break-points(phone-big)) {
+            @content;
+        }
+    }
+
+
+    // 800px
+    @if $breakpoint==tablet-port {
+        @media screen and (max-width:break-points(tablet-port)) {
+            @content;
+        }
+    }
+
+
+    // 1000px
+    @if $breakpoint==tablet-land {
+        @media screen and (min-width:break-points(tablet-land)) {
+            @content;
+        }
+    }
+
+
+    // 1300px
+    @if $breakpoint==desktop {
+        @media screen and (min-width:break-points(desktop)) {
+            @content;
+        }
+    }
+
+
+    // 1800px
+    @if $breakpoint==desktop-big {
+        @media screen and (min-width:break-points(desktop-big)) {
+            @content;
+        }
+    }
+}
+
+//@ ************    ************ //

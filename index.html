@@ -12,8 +12,6 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
 
-
-
   <!-- CSS  -->
   <link rel="stylesheet" href="dist/css/normalize.css">
 
@@ -42,11 +40,11 @@
       <nav class="main-nav">
 
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">link2</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">link3</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">link4</a></li>
-          <li class="main-nav__item"><a href="#" class="nav-cta">link 5</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">How it works</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Meals</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Testimonials</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Pricing</a></li>
+          <li class="main-nav__item"><a href="#" class="nav-cta">Try for free</a></li>
         </ul>
 
       </nav>
@@ -649,10 +647,10 @@
 
       <!--% **** Content ****  -->
 
-      <div class="pricing__cards container grid-col-2">
+      <div class="pricing__cards container grid-col-2 col-gap-8">
 
         <!-- Card 1 -->
-        <div class="pricing__card">
+        <div class="pricing__card pricing__card--starter">
 
           <div class="pricing__card-header">
 
@@ -693,23 +691,25 @@
 
             <li class="pricing__card-item">
               <span class="pricing__card-icon">
-                <ion-icon name="checkmark-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
               </span>
-              <p class="pricing__card-text">0</p>
+              <p class="pricing__card-text"></p>
             </li>
 
           </ul>
 
 
-          <a href="#" class="pricing__card-btn">
-            Start eating well
-          </a>
+          <div class="pricing__card-btn-wrapper">
+            <a href="#" class="pricing__card-btn">
+              Start eating well
+            </a>
+          </div>
 
         </div>
 
 
         <!-- Card 2 -->
-        <div class="pricing__card">
+        <div class="pricing__card pricing__card--pro">
 
           <div class="pricing__card-header">
 
@@ -718,7 +718,7 @@
             </h4>
 
             <p class="pricing__card-price">
-              <span class="pricing__card-price--amount"><span>$</span>$649</span>
+              <span class="pricing__card-price--amount"><span>$</span>649</span>
               <span class="pricing__card-price--text">per month.That's just $11 per meal!</span>
             </p>
 
@@ -758,16 +758,21 @@
           </ul>
 
 
-
-          <a href="#" class="pricing__card-btn">
-            Start eating well
-          </a>
-
+          <div class="pricing__card-btn-wrapper">
+            <a href="#" class="pricing__card-btn">
+              Start eating well
+            </a>
+          </div>
 
         </div>
 
       </div>
 
+      <div class="container pricing-details-container">
+        <p class="pricing-details">
+          Prices include all applicable taxes. You can cancel at any time.
+        </p>
+      </div>
 
     </div>
     <!-- @ ************  End Of Pricing  ************  -->
@@ -775,7 +780,81 @@
 
 
     <!-- @ ************  Features  ************  -->
-    <div class="features">
+    <div class="features container grid-col-4 col-gap-4">
+
+      <!-- Feature-1 -->
+      <div class="feature">
+
+        <span class="feature__icon">
+          <ion-icon name="infinite-outline"></ion-icon>
+        </span>
+
+        <h4 class="feature__title">
+          Never cook again!
+        </h4>
+
+        <p class="feature__para">
+          Our subscriptions cover 365 days per year, even including major holidays.
+        </p>
+
+      </div>
+
+
+      <!-- Feature-2 -->
+      <div class="feature">
+
+        <span class="feature__icon">
+          <ion-icon name="nutrition-outline"></ion-icon>
+        </span>
+
+        <h4 class="feature__title">
+          Local and organic
+        </h4>
+
+        <p class="feature__para">
+          Our cooks only use local, fresh, and organic products to prepare your meals.
+        </p>
+
+      </div>
+
+
+      <!-- Feature-3 -->
+      <div class="feature">
+
+        <span class="feature__icon">
+          <ion-icon name="earth-outline"></ion-icon>
+        </span>
+
+        <h4 class="feature__title">
+          No waste
+        </h4>
+
+        <p class="feature__para">
+          All our partners only use reusable containers to package all your meals.
+        </p>
+
+      </div>
+
+
+      <!-- Feature-4 -->
+      <div class="feature">
+
+        <span class="feature__icon">
+          <ion-icon name="pause-outline"></ion-icon>
+        </span>
+
+        <h4 class="feature__title">
+          Pause anytime
+        </h4>
+
+        <p class="feature__para">
+          Going on vacation? Just pause your subscription, and we refund unused days.
+        </p>
+
+      </div>
+
+
+
 
     </div>
     <!-- @ ************  End Of Features  ************  -->
@@ -783,6 +862,70 @@
   </section>
 
   <!-- $ *******************  End Of Pricing-Features Section  ******************* $ -->
+
+
+
+  <!-- $ *******************  Cta Section  ******************* $ -->
+  <section class="cta">
+    <div class="container cta__container--outer">
+      <div class="cta__container--inner">
+
+        <!-- Text Box -->
+        <div class="cta__text-box">
+
+          <h2 class="cta__heading">
+            Get your first meal for free!
+          </h2>
+
+          <p class="cta__para">
+            Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause
+            anytime. And the first meal is on us!
+          </p>
+
+
+          <form class="cta__form">
+
+            <div class="cta__form__input-group">
+              <label for="full-name" class="cta__form__label">Full Name</label>
+              <input type="text" class="cta__form__input" name="full-name" placeholder="John Smith" id="full-name"
+                required>
+            </div>
+
+            <div class="cta__form__input-group">
+              <label for="Email" class="cta__form__label">Email address</label>
+              <input type="email" class="cta__form__input" name="Email" id="Email" placeholder="me@example.com" id=""
+                required>
+            </div>
+
+            <div class="cta__form__input-group">
+              <label for="select" class="cta__form__label">Where did you hear us from?</label>
+              <select name="select" id="select" class="cta__form__select">
+                <option value="">Please Choose One Option</option>
+                <option value="Friends">Friends And family</option>
+                <option value="YouTube">YouTube Video</option>
+                <option value="Podcast">Podcast</option>
+                <option value="Facebook Ad">Facebook Ad</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="cta__form__btn btn">
+              Sign up now
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <!-- Img Box -->
+        <div class="cta__img-box" role="img" aria-label="Woman enjoying food">
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- $ *******************  End Of Cta Section  ******************* $ -->
 
 
 
@@ -796,6 +939,126 @@
   <!--* ***************************************  Footer  *************************************** -->
 
   <footer class="footer">
+
+    <div class="container footer__container">
+
+      <!--# ------- Logo Col ------- -->
+      <div class="footer__logo footer__col">
+
+        <a href="#" class="footer__logo-img-wrapper">
+          <img src="./dist/img/omnifood-logo.png" alt="" class="footer__logo-img">
+        </a>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p class="footer__copy">Copyright &copy; 2022 by Omnifood,Inc.All rights reserved.</p>
+
+      </div>
+
+
+      <!--# ------- Contact Col ------- -->
+      <div class="footer__contact footer__col">
+
+        <h4 class="footer__heading">Contact us</h4>
+
+        <address class="footer__contact-address">
+
+          <p class="footer__contact-address-para">
+            623 Harrison St., 2nd Floor, San Francisco, CA 94107
+          </p>
+
+          <p class="footer__contact-address-para">
+            <a href="tel:415-201-6370" class="footer__contact-address-phone">415-201-6370</a>
+            <a href="mailto:hello@Omnifood.com" class="footer__contact-address-email">hello@Omnifood.com</a>
+          </p>
+
+        </address>
+
+      </div>
+
+
+      <!--# ------- Account Col ------- -->
+      <nav class="footer__account footer__col">
+
+        <h4 class="footer__heading">Account</h4>
+
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Create account</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Sign in</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">iOS app</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Android app</a>
+          </li>
+        </ul>
+
+      </nav>
+
+
+      <!--# ------- Company Col ------- -->
+      <nav class="footer__company footer__col">
+
+        <h4 class="footer__heading">Company</h4>
+
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">About Omnifood</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">For Business</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Cooking partners</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Careers</a>
+          </li>
+        </ul>
+
+      </nav>
+
+
+      <!--# ------- Resources Col ------- -->
+      <nav class="footer__resources footer__col">
+
+        <h4 class="footer__heading">Resources</h4>
+
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Recipe directory</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Help center</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Privacy & terms</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
 
   </footer>
 

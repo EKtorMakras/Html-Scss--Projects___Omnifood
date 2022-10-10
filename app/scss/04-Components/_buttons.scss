@@ -28,8 +28,7 @@
     }
 
 
-    &:active,
-    &:focus {
+    &:active {
         transform: translateY(1px);
         box-shadow: shadow(lg-2);
         outline: none;
